@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/Yanika/static/css/main.f855e6bc.css",
-    "main.js": "/Yanika/static/js/main.fafab9cd.js",
+    "main.css": "/Yanika/static/css/main.3836df38.css",
+    "main.js": "/Yanika/static/js/main.68656ef4.js",
     "static/js/453.2f679600.chunk.js": "/Yanika/static/js/453.2f679600.chunk.js",
+    "static/media/typing.png": "/Yanika/static/media/typing.3a258228391e8f3da014.png",
     "static/media/logo.svg": "/Yanika/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Yanika/index.html",
-    "main.f855e6bc.css.map": "/Yanika/static/css/main.f855e6bc.css.map",
-    "main.fafab9cd.js.map": "/Yanika/static/js/main.fafab9cd.js.map",
+    "main.3836df38.css.map": "/Yanika/static/css/main.3836df38.css.map",
+    "main.68656ef4.js.map": "/Yanika/static/js/main.68656ef4.js.map",
     "453.2f679600.chunk.js.map": "/Yanika/static/js/453.2f679600.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.fafab9cd.js"
+    "static/css/main.3836df38.css",
+    "static/js/main.68656ef4.js"
   ]
 }
