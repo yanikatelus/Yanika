@@ -1,26 +1,35 @@
 /* HomePage.css */
 
 .homepage {
+  background: rgba(0, 0, 0, 1);
+  top: 0;
   position: relative;
   color: white;
-  background-color: black; /* Placeholder for background image */
+  width: 100vw;
   height: 100vh;
-  font-family: Arial, sans-serif;
+}
+
+.background-image {
+  position: fixed; /* Stays fixed during scroll */
+  opacity: 80%;
+  top: 0%;
+  left: 76%;
+  width: 21%;
+  height: 100vh;
+  background: url('images/typing.png') no-repeat center center; 
+  background-size: cover; 
 }
   
 body, h1, h2, h3, h4, h5, h6 {
   font-family: 'Be Vietnam', sans-serif;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .top-nav {
-  
   font-weight: 600;
   font-size: 22px;
-
   position: sticky;
   top: 0;
-  background: rgba(0, 0, 0, 0.8);
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -33,9 +42,27 @@ body, h1, h2, h3, h4, h5, h6 {
   transform: translateY(-50%);
   left: 0;
   padding: 10px;
-  background: rgba(0, 0, 0, 0.8);
 }
   
+.social-links::before,
+.social-links::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  background-color: white; /* Adjust the color as needed */
+}
+
+.social-links::before {
+  top: -151%;
+  height: 150%;
+}
+
+.social-links::after {
+  bottom: -150%; /* Moves the line below the social links */
+  height: 150%;
+}
+
 .content {
   position: absolute;
   top: 50%;
@@ -46,45 +73,46 @@ body, h1, h2, h3, h4, h5, h6 {
 
 /* /////////// */
 
-.maincontent{
-  background-color: black;
+.fold{
   display: flex;
   padding-left: 19%;
   justify-content: right;
-  align-items: center; /* Vertically center the content (if needed) */
+  align-items: center;
   height: 100%;
   max-width: 100vw;
   width: 100%; 
+  
 }
-/* Background Image */
-.background-image {
-  position: sticky;
-  z-index: 1; 
-  opacity: 80%;
-  position: absolute;
-  top: 0;
-  left: 76%;
-  width: 21%;
-  height: 100vh;
-  /* background: url('images/Figma_Hero.gif') no-repeat center center;  */
-  background: url('images/typing.png') no-repeat center center; 
-  background-size: cover;
+
+.background-black-fixed{
+  /* width: 100vw; */
+  overflow: hidden;
+  height: 100%;
+  overflow-y: auto;
+  scroll-snap-type: y proximity;
+  background-color: black;
+  z-index: -1;
+}
+.fold, .container, section {
+  height: 100vh; 
+  scroll-snap-align: start; 
 }
 
 .container {
+  display: flex;
   position: relative;
   z-index: 1;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   text-align: center;
-}
 
+}
+/* SOFTWARE ENGINEER ect fade cycle */
 @keyframes fadeCycle {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.25; }
+  50% { opacity: 0.15; }
 }
 
 /* Remove the span part from these selectors to apply the animation to the entire row */
@@ -138,15 +166,10 @@ aside a {
   color: white;
   margin-bottom: 10px;
 }
-
-/* .active_button{
-  border-radius: 8px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  outline: none;
-  border: none;
-  background: #5DFDCB;
-} */
+/* 123 experience buttons */
+.navigation-buttons{
+margin-top: 5%;
+}
 
 .active_button {
   position: relative;
@@ -192,4 +215,146 @@ aside a {
 .active_button:hover rect {
   animation-timing-function: ease-out;
   stroke-dashoffset: 0;
+}
+
+/* Expereinces css */
+.professional-experience {
+  text-align: left;
+  margin-left: 19%;
+  display: flex;
+  align-items: self-start;
+  justify-content: flex-start;
+  padding: 50px; 
+  color: white; 
+}
+
+/* #professional-experience-scrollable{
+  height: 65vh;
+  overflow-y: scroll;
+} */
+
+.professional-experience .title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-right: 50px; /* Space between title and details */
+  text-transform: uppercase; /* UPPERCASE text */
+}
+.number-block{
+  font-size: 12rem;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-right: -0.25rem;
+  margin-bottom: 3.125rem;
+  color: #fff;
+}
+.has-accent-color{
+  color: aqua;
+  font-size: 12.5rem;
+  font-weight: 500;
+  font-family: Gilroy;
+}
+
+
+
+.box {
+  position: relative;
+  padding: 4.375rem 0 4.125rem 3.125rem;
+}
+
+/* Top border */
+.box::before {
+  content: '';
+  position: absolute;
+  background: white;
+  height: 1px;
+  width: 0;
+  top: 0;
+  left: 0;
+  animation: drawTopBorder 1s ease forwards;
+}
+
+@keyframes drawTopBorder {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Left border */
+.box::after {
+  content: '';
+  position: absolute;
+  background: white;
+  width: 1px;
+  height: 0;
+  top: 0;
+  left: 0;
+  animation: drawLeftBorder 1s ease forwards 1s; /* Starts after the top border is done */
+}
+
+@keyframes drawLeftBorder {
+  from { height: 0; }
+  to { height: 100%; }
+}
+
+/* Bottom border */
+.box .bottom-border {
+  position: absolute;
+  background: white;
+  height: 1px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  animation: drawBottomBorder 1s ease forwards 2s; /* Starts after the left border is done */
+}
+
+@keyframes drawBottomBorder {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.details{
+  margin-left: 10%;
+  /* margin-bottom: 15%; */
+}
+
+.professional-experience .details {
+  flex-grow: 1; /* Take up remaining space */
+}
+
+.details .role {
+  font-size: 28px; /* Slightly smaller font size for role */
+  font-weight: 500;
+  margin-bottom: 10px; /* Space below the role */
+}
+
+.details .date {
+  font-size: 18px; /* Smaller font size for date */
+  color: rgba(93, 253, 203, 0.9); /* Grey color for date */
+  margin-bottom: 20px; /* Space below the date */
+}
+
+.details ul {
+  list-style-type: circle; /* Remove bullet points */
+  padding-top: 0.024%;
+  margin: 0 0 24px 0; /* Space below the list */
+}
+
+.details li {
+  font-size: 17px;
+  font-family: 'Avenir Next';
+  font-weight: 400;
+  line-height: 25px;
+  padding: 10px;
+}
+
+.skills {
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 10px; 
+}
+
+.skill-tag {
+  padding: 5px 15px; /* Padding inside tags */
+  background-color: #333; /* Dark background for tags */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 17px; /* Smaller font size for tags */
 }
