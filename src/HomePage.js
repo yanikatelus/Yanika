@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './HomePage.css'; // Link to the CSS file
+import './HomePage.css';
+
+import GraduationImage from './images/graduation.png';
+import suprisedImage from './images/suprised.png';
 
 
 function HomePage() {
@@ -13,14 +16,14 @@ function HomePage() {
   const experiences = [
     {
       id: 1,
-      role: "UX Design Coordinator, Slide UX",
+      role: "UX Designer, Slide UX",
       date: "June 2022 – March 2023",
       tasks: [
         "Led stages of the UX design process, including user research, wireframing, prototyping, and usability testing (Figma)",
         "Worked closely with designers, developers, and product managers, and stakeholders to integrate research insights into product development cycles",
         "Oversaw research studies to inform the design & development of products including recruiting participants, conducting interviews, and synthesizing research resulting in an increase in user engagement."
       ],
-      skills: ["User flow", "Wireframe", "User research", "Usability Testing", "Communication", "Presentation"]
+      skills: ["UI&UX Design", "Wireframing", "User research", "Usability Testing", "Communication", "Presentation"]
     },
     {
       id: 2,
@@ -32,7 +35,7 @@ function HomePage() {
         "Collaborated with cross-functional stakeholders in the Marketing and Engineering organizations",
         "Built dynamic gauge data visualization to allow users to track times & position."
       ],
-      skills: ["Git", "Docker","Python", "React ", "Usability Testing", "RESTful APIs", "UX/UI Design", "Figma"]
+      skills: ["Git", "Docker", "Python", "React ", "Usability Testing", "RESTful APIs", "UX/UI Design", "Figma"]
     },
     {
       id: 3,
@@ -58,7 +61,6 @@ function HomePage() {
         <nav>
           <a href="#resume">RESUME</a>
           <a href="#projects">PROJECTS</a>
-          <a href="#work">WORK</a>
         </nav>
       </header>
       <aside className="social-links">
@@ -95,7 +97,7 @@ function HomePage() {
               <span>UI</span>
               <span>DESIGNER</span>
             </div>
-            <button className='active_button' onClick={() => window.location.href = '/Yanika_Telus_Resume.pdf'} download="Yanika_Telus_Resume">
+            <button className='active_button' onClick={() => window.location.href = '/Telus_Yanika_Resume.pdf'} download="Yanika_Telus_Resume">
               <svg width="100%" height="100%" viewBox="0 0 200 50">
                 <rect x="1" y="1" width="198" height="48" fill="transparent" stroke="#fff" strokeWidth="2" rx="8" ry="8" />
               </svg>
@@ -107,35 +109,18 @@ function HomePage() {
         <section id="section1" >
 
           <div className="container">
-            <div class="professional-experience">
+            <div className="professional-experience">
 
               <div className='box'>
-                <div class="title">
+                <div className="title">
                   Professional Experience
                 </div>
                 <span className='number-block'>03</span>
-                <span class="has-accent-color">.</span>
-                <div class="bottom-border"></div> 
+                <span className="has-accent-color">.</span>
+                <div className="bottom-border"></div>
               </div>
 
               <div id='professional-experience-scrollable'>
-                {/* <div class="details">
-                  <div class="role">UX Design Coordinator, Slide UX</div>
-                  <div class="date">June 2022 – March 2023</div>
-                  <ul>
-                    <li>Led stages of the UX design process, including user research, wireframing, prototyping, and usability testing (Figma)</li>
-                    <li>Worked closely with designers, developers, and product managers, and stakeholders to integrate research insights into product development cycles</li>
-                    <li>Oversaw research studies to inform the design & development of products including recruiting participants, conducting interviews, and synthesizing research resulting in an increase in user engagement.</li>
-                  </ul>
-                  <div class="skills">
-                    <div class="skill-tag">User flow</div>
-                    <div class="skill-tag">Wireframe</div>
-                    <div class="skill-tag">User research</div>
-                    <div class="skill-tag">Usability Testing</div>
-                    <div class="skill-tag">Communication</div>
-                    <div class="skill-tag">Presentation</div>
-                  </div>
-                </div> */}
                 <div className="details">
                   <div className="role">{experiences[activeIndex].role}</div>
                   <div className="date">{experiences[activeIndex].date}</div>
@@ -150,16 +135,16 @@ function HomePage() {
                     ))}
                   </div>
                   <div className="navigation-buttons">
-                  {experiences.map((experience) => (
-                    <button 
-                      key={experience.id} 
-                      onClick={() => handleExperienceChange(experience.id - 1)}  // Adjusted for zero-based index if needed
-                      className={`nav-button ${experience.id - 1 === activeIndex ? 'active' : ''}`}
-                    >
-                      {experience.id}
-                    </button>
-                  ))}
-                </div>
+                    {experiences.map((experience) => (
+                      <button
+                        key={experience.id}
+                        onClick={() => handleExperienceChange(experience.id - 1)}  // Adjusted for zero-based index if needed
+                        className={`nav-button ${experience.id - 1 === activeIndex ? 'active' : ''}`}
+                      >
+                        {experience.id}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>{/* professional-experience-scrollable */}
             </div>
@@ -167,10 +152,127 @@ function HomePage() {
 
           {/* </div> */}
         </section>
-        <section className="container" id="section2" >Section 3 Content</section>
-        <section className="container" id="section3">Section 4 Content</section>
-        <section className="container" id="section4">Section 5 Content</section>
-        <section className="container" id="section5">Section 6 Content</section>
+        <section className="container" id="section2">
+
+          {/* <div className="container"> */}
+          <div className="edu">
+            <div className="title">
+              Education
+            </div>
+            <div className="details">
+              <div className="role">Rochester Institute of Technology</div>
+              <div className="date">B.S. Human Center Computing
+                <br></br>Honors, Cum Laude</div>
+              <div className="skills" id='skills-edu'>
+                <div className="skill-tag">Software Development</div>
+                <div className="skill-tag">New media Design</div>
+                <div className="skill-tag">Psychology</div>
+              </div>
+              <div>
+                <img id="grad-pic" src={GraduationImage} alt="Graduation Image" />
+              </div>
+            </div>
+          </div>
+          {/* </div> */}
+          {/* Skills section */}
+        </section>
+        <section className="container" id="section3">
+          <div className="edu">
+            <div className="title">
+              Skills
+            </div>
+            <div className="details">
+              <div className="skills-section">
+                <div className="skills-column">
+                  <h3>Coding</h3>
+                  <ul>
+                    <li>Objective-C / Swift</li>
+                    <li>HTML & CSS</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript, Angular & React</li>
+                    <li>Java</li>
+                    <li>Data structures & algorithms</li>
+                    <li>Docker</li>
+                    <li>Firebase</li>
+                    <li>Google Cloud</li>
+                    <li>Git (Version Control)</li>
+                  </ul>
+                </div>
+                <div className="skills-column">
+                  <h3>UX/UI</h3>
+                  <ul>
+                    <li>Prototyping & User Testing</li>
+                    <li>Design Systems</li>
+                    <li>UX Research & Interviewing</li>
+                    <li>Data Analysis</li>
+                    <li>Usability Testing</li>
+                    <li>Empathy & User-Centric Design</li>
+                    <li>Cross-functional Communication</li>
+                    <li>Interaction Design</li>
+                    <li>Branding, typography, and color theory</li>
+                    <li>Style guides</li>
+                  </ul>
+                </div>
+                <div className="skills-column">
+                  <h3>Tools</h3>
+                  <ul>
+                    <li>Xcode</li>
+                    <li>Visual Studio Code</li>
+                    <li>Github</li>
+                    <li>Figma</li>
+                    <li>Sketch</li>
+                    <li>Illustrator/Photoshop</li>
+                    <li>Azure, Jira</li>
+                    <li>Miro</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/*Check Out My Projects*/}
+        <section className="container" id="section4"><div className="edu">
+          <div className="title">
+            Check Out My Projects
+            <div className="projects-section">
+              <div className="projects-column">
+                <div className='card'>
+                  <img className='project-img' src={suprisedImage} />
+                  <h3>BALANCE APP</h3>
+                  <p className='project-p'>
+                    An IOS app that Balance is a health app centered on keeping track and
+                    providing an overall view of your health and wellness
+                  </p>
+                </div>
+                <div className='tag-section'>
+                  <div className="project-tag">Coding</div>
+                  <div className="project-tag">Design</div>
+                </div>
+              </div>
+              <div className="projects-column">
+                <div className='card'>
+                  <img className='project-img' src={suprisedImage} />
+                  <h3>BALANCE APP</h3>
+                  <p className='project-p'>
+                    An IOS app that Balance is a health app centered on keeping track and
+                    providing an overall view of your health and wellness
+                  </p>
+                </div>
+                <div className='tag-section'>
+                  <div className="project-tag">Coding</div>
+                  <div className="project-tag">Design</div>
+                </div>
+              </div>
+              <div className="projects-column">
+                <div className='card'>
+                  <img className='project-img' src={suprisedImage} />
+                  <h3>Tools</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div></section>
+        <section className="container" id="section5">Section 5 Content</section>
 
       </div>
       {/* Random comment */}
