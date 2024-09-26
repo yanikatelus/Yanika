@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/Yanika/static/css/main.d02027a6.css",
-    "main.js": "/Yanika/static/js/main.97221e91.js",
+    "main.css": "/Yanika/static/css/main.aabbaefb.css",
+    "main.js": "/Yanika/static/js/main.619dd90b.js",
     "static/js/453.2f679600.chunk.js": "/Yanika/static/js/453.2f679600.chunk.js",
-    "static/media/typing.png": "/Yanika/static/media/typing.3a258228391e8f3da014.png",
+    "static/media/bubble.mp4": "/Yanika/static/media/bubble.0cfbe5ed21690269f09c.mp4",
+    "static/media/graduation.png": "/Yanika/static/media/graduation.1027d07bf2f58b401bb1.png",
+    "static/media/suprised.png": "/Yanika/static/media/suprised.4fa7fc926928197c1bf8.png",
     "static/media/logo.svg": "/Yanika/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Yanika/index.html",
-    "main.d02027a6.css.map": "/Yanika/static/css/main.d02027a6.css.map",
-    "main.97221e91.js.map": "/Yanika/static/js/main.97221e91.js.map",
+    "main.aabbaefb.css.map": "/Yanika/static/css/main.aabbaefb.css.map",
+    "main.619dd90b.js.map": "/Yanika/static/js/main.619dd90b.js.map",
     "453.2f679600.chunk.js.map": "/Yanika/static/js/453.2f679600.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d02027a6.css",
-    "static/js/main.97221e91.js"
+    "static/css/main.aabbaefb.css",
+    "static/js/main.619dd90b.js"
   ]
 }
