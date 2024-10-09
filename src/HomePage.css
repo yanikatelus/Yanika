@@ -49,6 +49,7 @@ h6 {
   transform: translateY(-50%);
   left: 0;
   padding: 10px;
+  z-index: 10;
 }
 
 .social-links::before,
@@ -115,7 +116,7 @@ section {
   position: relative;
   z-index: 1;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   height: 100vh;
   text-align: center;
@@ -196,7 +197,9 @@ aside a {
 
 /* 123 experience buttons */
 .navigation-buttons {
-  margin-top: 5%;
+  display: flex;
+  margin-top: 310%;
+  margin-left: 78%;
 }
 
 .active_button {
@@ -253,11 +256,12 @@ aside a {
 /* Expereinces css */
 .professional-experience {
   text-align: left;
+  width: 40%;
   margin-left: 19%;
   display: flex;
-  align-items: self-start;
+  /* align-items: self-start; */
   justify-content: flex-start;
-  padding: 50px;
+  padding: 0px;
   color: white;
 }
 
@@ -290,8 +294,6 @@ aside a {
   font-weight: 500;
   font-family: Gilroy;
 }
-
-
 
 .box {
   position: relative;
@@ -371,7 +373,9 @@ aside a {
 }
 
 .professional-experience .details {
-  flex-grow: 1;
+  width: 40%;
+  /* flex-grow: 1; */
+  /* padding-top: 20px; */
   /* Take up remaining space */
 }
 
@@ -421,6 +425,27 @@ aside a {
   font-size: 17px;
 }
 
+.nav-button {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin: 0px 20px 0px 0px;
+  outline: none;
+  border: none;
+  background: #D8C2FF;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  text-align: center;
+}
+.nav-button.active {
+  border-color: white; /* Highlight the active button */
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
 /* Educaation section */
 .edu {
   text-align: left;
@@ -546,4 +571,110 @@ li {
 .tag-section{
   display: flex;
   flex-direction: row;
+}
+
+/* Phone */
+@media (max-width: 1400px) { 
+  .Line_Text {
+    font-size: 50px;
+  }
+}
+@media (max-width: 728px) {
+  .Line_Text {
+    font-size: 30px;
+  }
+  .navigation-buttons, .skills-section {
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+}
+
+@media (max-width: 414px) {
+  .top-nav{
+    align-items:normal;
+
+  }
+  .Line_Text {
+    font-size: 18px;
+  }
+  .details .role {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .has-accent-color {
+    line-height: 0.2;
+}
+  .social-links {
+    display: none;
+  }
+  .fold{
+    display: flex;
+    justify-content: center;
+    padding-left: 0px;
+  }
+  .Line_Text span:first-child {
+    color: #5DFDCB;
+  }
+  .Line_Text{
+    display: block;
+  }
+  .fold, .container, section {
+    scroll-snap-align: unset;
+  }
+
+  .edu{
+    margin-left: 2%;
+    display: block;
+  }
+  #section2 {
+    padding-top: 50px;
+    padding-bottom: 150px;
+  }
+
+  .edu .details{
+    padding-top: 10%;
+    margin-left: 0%;
+  }
+  .edu .skills {
+    display: none;
+  }
+
+  #grad-pic{
+    width: 95%;
+  }
+  #section4{
+    margin-top: 280px;
+  }
+  .skills-section{
+    padding: 0 10px 10px 0px;
+  }
+  .details li {
+    font-size: 17px;
+    font-family: 'Avenir Next';
+    font-weight: 400;
+    line-height: 20px;
+    padding: 5px;
+}
+
+}
+
+@media (max-width: 1166px) {
+  .professional-experience{
+    display: block;
+    margin-left: 0;
+    padding: 20px;
+  }
+  .professional-experience .title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 30px;
+    text-transform: uppercase;
+  }
+  .professional-experience .details{
+    padding-top: 20px;
+  }
+  .number-block {
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: .4;
+  }
 }
